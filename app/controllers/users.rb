@@ -14,8 +14,10 @@ get '/confirmed' do
   'You Have Been Added Successfully'
 end
 
-#Create User Index Route
-
+get '/users' do 
+  users = User.all()
+  erb :'users/index', locals: {users: users}  
+end
 
 #Create User Show Route
 

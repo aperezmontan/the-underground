@@ -1,4 +1,12 @@
-<h1> Users Mailing List </h1>
+<h2> Users Mailing List </h2>
 <div>
-  list all users here
+  <% users.each do |user| %>
+    <div class='user'>
+      <div>
+        <a href='/users/<%= user.id %>'>
+          <%= "#{user.first_name} #{user.last_name}" %>
+        </a>
+      </div>
+    </div>
+  <% end %>
 </div>
