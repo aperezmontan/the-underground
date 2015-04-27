@@ -16,7 +16,7 @@ end
 
 get '/users' do 
   users = User.all()
-  erb :'users/index', locals: {users: users}  
+  erb :'users/index', locals: { users: users}  
 end
 
 #Create User Show Route
