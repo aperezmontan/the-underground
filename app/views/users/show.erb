@@ -1,9 +1,7 @@
 <div>
   <form action='/users/<%= user.id %>' method='post'>
     <input type='hidden' name='_method' value='delete' />
-    <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
-    <div><%= user.email %> </div>
-    <div><%= user.age   %> </div>
+    <%= erb :'users/_view', locals: {user: user } %>
     <div>
       <input type='submit' value='delete'/>
     </div>
