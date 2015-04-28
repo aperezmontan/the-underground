@@ -1,12 +1,9 @@
 <h2> Users Mailing List </h2>
 <div>
   <% users.each do |user| %>
-    <div class='user'>
-      <div>
-        <a href='/users/<%= user.id %>'>
-          <%= "#{user.first_name} #{user.last_name}" %>
-        </a>
-      </div>
+    <%= erb :'users/_view', locals:{user: user} %>
+    <div>
+      <a href='/users/<%= user.id %>'>View</a>
     </div>
   <% end %>
 </div>
