@@ -1,4 +1,4 @@
-<div>
+<div id='single-user'>
   <form action='/users/<%= user.id %>' method='post'>
     <input type='hidden' name='_method' value='delete' />
     <%= erb :'users/_view', locals: {user: user } %>

@@ -1,0 +1,25 @@
+body{
+  background-color: #00C2FF;
+  margin: 0px; 
+  padding:0px;
+  text-align:center;
+}
+
+#header{
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Permanent Marker', cursive; 
+  background-color: #167B9A;
+  border-bottom: 5px solid #415655;
+  padding: 5px;
+}
+
+#content{
+  width:80%;
+  margin:0px auto;
+  text-align:left;
+  padding:15px;
+  padding-top: 0px;
+}
+
+
