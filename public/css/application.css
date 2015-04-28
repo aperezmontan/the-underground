@@ -22,4 +22,54 @@ body{
   padding-top: 0px;
 }
 
+#all-users{
+  margin: 10px;
+}
 
+.section-header{
+  font-size: 1.25em; 
+  font-family: 'Permanent Marker', cursive;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #415655;
+}
+
+.user{
+  width: auto;
+  margin: 5px;
+  background-color: #1F2122;
+  color: #E3F6FC;
+  padding: 10px;  
+}
+
+.user > .name, .user > .name > a{
+  font-weight: bold;
+  border-bottom: 2px solid #167B9A;
+}
+
+.user > .name > a{
+  color: #E3F6FC;
+  text-decoration: none;
+}
+
+.user > .name > a{
+  color: #E3F6FC;
+  text-decoration: none;
+}
+
+.user > .name > a:hover {
+  color: #E3F6FC;
+  font-style: italic;
+}
+.user > .info{
+  padding: 5px;
+}
+
+.user > .info > .label{  
+  font-weight: bold;
+  text-align: right;
+  float: left;
+}
+
+.user > .info > .value{
+  margin-left: 60px;
+}

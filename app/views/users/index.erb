@@ -1,9 +1,6 @@
-<h2> Users Mailing List </h2>
 <div id='all-users'>
+  <div class='section-header'> Users Mailing List </div>
   <% users.each do |user| %>
-    <%= erb :'users/_view', locals:{user: user} %>
-    <div>
-      <a href='/users/<%= user.id %>'>View</a>
-    </div>
+    <%= erb :'users/_view', locals:{user: user, name_link: true} %>
   <% end %>
 </div>
