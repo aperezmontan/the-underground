@@ -26,5 +26,11 @@ get '/users/:id' do
   erb :'/users/show', locals: {user: user}
 end
 
-#Create User Delete Route
+delete '/users/:id' do
+  user = User.find_by(id: params[:id])
+  return [500,"No user by that ID found"] unless user
 
+  user.destroy
+
+  redirect '/users'
+end
