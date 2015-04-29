@@ -1,6 +1,6 @@
-class CreateBottlesServices < ActiveRecord::Migration
+class CreateBottleServices < ActiveRecord::Migration
   def change
-    create_table :bottles_services do |t|
+    create_table :bottle_services do |t|
       t.integer :vip_id,    null: false
       t.integer :bottle_id, null: false
       t.integer :mixer_id,  null: false
