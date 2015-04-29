@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-    # users.password_hash in the database is a :string
   include BCrypt
+  has_many :events, foreign_key: 'organizer_id'
 
   def password
     @password ||= Password.new(password_hash)
