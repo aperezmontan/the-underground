@@ -1,13 +1,7 @@
 #Create New User Route
 post '/users' do
-  new_user = User.new()
-  new_user.first_name = params[:first_name]
-  new_user.last_name  = params[:last_name]
-  new_user.email      = params[:email]
-  new_user.age        = params[:age]
-
-  redirect '/confirmed' if new_user.save
-  redirect back 
+  new_user = User.new(user_params params[:user])
+  redirect new_user.save ? '/confirmed' : back
 end
 
 get '/confirmed' do
@@ -33,4 +27,16 @@ delete '/users/:id' do
   user.destroy
 
   redirect '/users'
+end
+
+####
+
+def user_params params
+  params.each_with_object({}) do |(key,value), obj|
+    obj[key] = value if valid_params.include?(key.to_sym)
+  end
+end
+
+def valid_params
+  [:first_name, :last_name, :age, :email, :password]
 end
