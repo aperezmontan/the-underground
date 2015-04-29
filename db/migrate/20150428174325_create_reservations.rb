@@ -1,6 +1,6 @@
-class CreateVips < ActiveRecord::Migration
+class CreateReservations < ActiveRecord::Migration
   def change
-    create_table :vips do |t|
+    create_table :reservations do |t|
       t.integer     :event_id,  null: false
       t.integer     :user_id,   null: false
       t.timestamps              null: false
