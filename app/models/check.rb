@@ -1,3 +1,4 @@
 class Check < ActiveRecord::Base
-  # Remember to create a migration!
+  belongs_to :reservation
+  has_and_belongs_to_many :items
 end
