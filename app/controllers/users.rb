@@ -1,4 +1,8 @@
-#Create New User Route
+# Get Registration Form
+get '/user/new' do 
+end
+
+# Register User
 post '/users' do
   new_user = User.new(user_params params[:user])
   redirect new_user.save ? '/confirmed' : back
