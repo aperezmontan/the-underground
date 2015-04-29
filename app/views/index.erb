@@ -2,10 +2,11 @@
 <hr />
 <form method='post' action='/users'>
   <div>
-    <input type='text'    name='first_name' placeholder='Your First Name' />
-    <input type='text'    name='last_name'  placeholder='Your Last Name' />
-    <input type='number'  name='age'        placeholder='Age ' min='0' max='150'  />
-    <input type='email'   name='email'      placeholder='Your Email Address' />
+    <input type='text'     name='user[first_name]' placeholder='Your First Name' />
+    <input type='text'     name='user[last_name]'  placeholder='Your Last Name' />
+    <input type='number'   name='user[age]'        placeholder='Age ' min='0' max='150'  />
+    <input type='email'    name='user[email]'      placeholder='Your Email Address' />
+    <input type="password" name='user[password]'   placeholder='password' />
   </div> 
   <div>
     <input type='submit' value='signup' />
