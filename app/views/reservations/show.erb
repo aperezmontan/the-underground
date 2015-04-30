@@ -1,0 +1,18 @@
+<div id='all-reservations'>
+  <div class='section-header'>Reservations by Event</div>
+  <% reservations.keys.each do |event| %>
+    <div class='event'>
+      <div class='header'>
+        <div class='field'><%= event.name %></div>
+        <div class='field'><%= event.date_of.strftime('%m/%d/%Y') %></div>
+        <div class='field'> <%= event.min_age %>+</div>
+      </div>
+      <% reservations[event].each do |reservation| %>
+        <div class='reservations'>
+          <div class='field'>Name: <%= "#{reservation.user.first_name} #{reservation.user.last_name}" %></div>
+          <div class='field'>Total: $<%="#{"%.2f" % reservation.check.total_bill}" %></div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

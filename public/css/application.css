@@ -22,7 +22,7 @@ body{
   padding-top: 0px;
 }
 
-#all-users{
+#all-users, #all-reservations{
   margin: 10px;
 }
 
@@ -33,15 +33,16 @@ body{
   border-bottom: 2px solid #415655;
 }
 
-.user{
-  width: auto;
+.user, .event{
+  width: 100%;
+  float: left;
   margin: 5px;
   background-color: #1F2122;
   color: #E3F6FC;
   padding: 10px;  
 }
 
-.user > .name, .user > .name > a{
+.user > .name, .user > .name > a {
   font-weight: bold;
   border-bottom: 2px solid #167B9A;
 }
@@ -73,3 +74,22 @@ body{
 .user > .info > .value{
   margin-left: 60px;
 }
+
+.event > .header{
+  width: 100%;
+  border-bottom: 3px dashed #00C2FF;
+  padding: 3px;
+  float: left;
+}
+
+.event > .header > .field {
+  width: 33%;
+  float: left;
+}
+
+.reservations > .field{
+  width: 40%;
+  float: left;
+  padding: 5px;
+}
+

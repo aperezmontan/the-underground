@@ -5,3 +5,9 @@ def current_user
     return nil
   end
 end
+
+def require_loggedin
+end
+
+def is_authenticated?
+end
