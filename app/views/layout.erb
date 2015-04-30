@@ -11,7 +11,22 @@
 <body>
 <div id="content">
   <div id='header'>
-    The Underground
+    <div>The Underground</div>
+    <div>
+      <% if session[:user_id] %>
+      <form action='/session/end' method='post' >
+        <input type='submit' value = 'logout' />
+      </form>
+      <% else %>
+        <a href='/session/new'>Login</a>
+      <% end %>
+    </div>
+    <% if @error %>
+      <div class='error'>
+        <%= @error %>
+      </div>
+    <%end%>
+
   </div>
   <%= yield %>
 </div>

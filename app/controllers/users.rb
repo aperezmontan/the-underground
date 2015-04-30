@@ -1,11 +1,13 @@
-# Get Registration Form
-get '/user/new' do 
-end
-
 # Register User
 post '/users' do
   new_user = User.new(user_params params[:user])
-  redirect new_user.save ? '/confirmed' : back
+
+  if new_user.save
+    session[:user_id] = new_user.id
+    redirect '/users'
+  else
+    redirect back
+  end
 end
 
 get '/confirmed' do
