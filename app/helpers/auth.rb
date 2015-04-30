@@ -6,8 +6,10 @@ def current_user
   end
 end
 
-def require_loggedin
+def require_logged_in
+  redirect('/?error=ua') unless is_authenticated?
 end
 
 def is_authenticated?
+  return !!session[:user_id]
 end
