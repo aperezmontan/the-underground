@@ -1,5 +1,7 @@
 # Register User
 post '/users' do
+    require_logged_in
+
   new_user = User.new(user_params params[:user])
 
   if new_user.save

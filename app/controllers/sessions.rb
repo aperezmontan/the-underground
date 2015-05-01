@@ -5,6 +5,8 @@ end
 
 #Login User
 post '/session' do
+    require_logged_in
+
   cur_user = User.find_by(email: params[:email])
   if cur_user && cur_user.authenticate( params[:password] )
     session[:user_id] = cur_user.id
