@@ -1,6 +1,7 @@
 get '/' do 
-  if params[:error]  require_logged_in
+   require_logged_in
 
+  if params[:error]     
     @error = 'Something Went Wrong w/ what you were doing'
   end
 
