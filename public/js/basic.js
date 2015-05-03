@@ -67,3 +67,34 @@ arr.forEach( function(curItem,curIndex){
   console.log("arr["+curIndex+"]=" +curItem);
 });
 
+
+//Part 4: Methods
+
+function funcFoo(){
+  console.log("You've Envoked funcFoo");
+}
+
+console.log("Envoke a method with ()");
+console.log("funcFoo()=");
+console.log( funcFoo() );
+
+var funcBar = function(someParam){
+  console.log("You've Envoked funcBar");
+  console.log("/w the param=");
+  console.log( someParam );
+};
+
+console.log( "funcBar(1)=" );
+console.log(funcBar(1) );
+
+console.log( "funcBar([1,2,3])=" );
+console.log(funcBar([1,2,3]) );
+
+console.log( "funcBar( funcFoo  )=" );
+console.log(funcBar( funcFoo ) );
+
+
+
+
+
+
