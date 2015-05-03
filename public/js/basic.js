@@ -1,5 +1,4 @@
 //Part 1: Variables and Naming
-
 var foo = 100;
 console.log('foo=' + foo);
 
@@ -93,8 +92,28 @@ console.log(funcBar([1,2,3]) );
 console.log( "funcBar( funcFoo  )=" );
 console.log(funcBar( funcFoo ) );
 
+// Part 5: Objects
 
+var objectFoo = {};
+console.log('objectFoo='+ JSON.stringify(objectFoo)); 
 
+objectFoo["someKey"] = "someValue";
+objectFoo["key2"] = "value2";
+objectFoo["key3"] = "value3";
 
+console.log('objectFoo='+ JSON.stringify(objectFoo)); 
 
+console.log('object[:key2]='+ objectFoo['key2']); 
+console.log('object[:key2]='+ objectFoo.someKey); 
+
+objectFoo["someFunc"]= funcFoo;
+
+console.log('objectFoo.someFunc=');
+console.log(objectFoo.someFunc);
+
+console.log('objectFoo.someFunc()=');
+console.log(objectFoo.someFunc());
+
+console.log("objectFoo['someFunc']()=");
+console.log(objectFoo['someFunc']());
 
