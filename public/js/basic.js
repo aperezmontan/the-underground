@@ -47,9 +47,23 @@ var arr = [];
 arr.push("1");
 arr.push(2);
 arr.push("socks");
+arr.push("pops");
 
 console.log("arr=" +arr );
 console.log("arr[1]=" + arr[1]);
 
 console.log("arr.pop()=" + arr.pop());
 console.log("arr=" + arr);
+
+//Part 4: Iteration
+console.log("for loop");
+
+for(var i=0; i < arr.length; i++){
+  console.log("arr["+i+"]= " + arr[i]);
+}
+
+console.log('forEach method');
+arr.forEach( function(curItem,curIndex){
+  console.log("arr["+curIndex+"]=" +curItem);
+});
+
