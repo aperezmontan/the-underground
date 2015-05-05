@@ -1,3 +1,5 @@
+
+var basicDemo = function(){
 //Part 1: Variables and Naming
 var foo = 100;
 console.log('foo=' + foo);
@@ -116,4 +118,4 @@ console.log(objectFoo.someFunc());
 
 console.log("objectFoo['someFunc']()=");
 console.log(objectFoo['someFunc']());
-
+};

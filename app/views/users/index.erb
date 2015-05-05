@@ -3,4 +3,8 @@
   <% users.each do |user| %>
     <%= erb :'users/_view', locals:{user: user, name_link: true} %>
   <% end %>
+  <div class='actions'>
+    <a id='hide-users' href="#"> Hide All</a>
+    <a id='show-users' href="#"> Show All</a>
+  </div>
 </div>
