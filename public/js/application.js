@@ -23,11 +23,15 @@ var toggleUserOn = function(e){
 
 function loginUser(e){
   e.preventDefault()
-  console.log()
   $.ajax({
     url: this.action,
     method: this.method,
     data: $(e.target).serialize()
   })
-  .done(function(){alert("I'm logged in!")})
+  .done(function(resp){
+    $(".container").html(resp)
+  })
+  .error(function(resp){
+    alert(JSON.stringify(resp))
+  })
 }
