@@ -3,8 +3,7 @@ $(document).ready(function(){
   $('#show-users').on('click', toggleUserOn);
   $('#show-users').hide();
 
-
-  $(document).on('mousemove',function(e){ console.log(e)}) 
+  $("#user > form").on("submit", loginUser)
 
 });
 
@@ -22,4 +21,13 @@ var toggleUserOn = function(e){
   $('#hide-users').toggle();
 };
 
-
+function loginUser(e){
+  e.preventDefault()
+  console.log()
+  $.ajax({
+    url: this.action,
+    method: this.method,
+    data: $(e.target).serialize()
+  })
+  .done(function(){alert("I'm logged in!")})
+}
